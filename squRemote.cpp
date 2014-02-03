@@ -24,7 +24,7 @@
 #include "server.h"
 #include "sim.h"
 
-void server::on_receive(const char *buf,int no) {
+void server::on_receive(const char *buf) {
     keybd k=buf;
     k.exe();
 }
