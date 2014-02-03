@@ -79,7 +79,7 @@ void server::serve() {
 		if (n < 0) error("ERROR reading from socket");
 		else {
 			buffer[n-1]='\0';
-			on_receive(buffer,n);
+			on_receive(buffer);
 		}
 	}
 }
