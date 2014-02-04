@@ -21,8 +21,8 @@
  * 
  */
 
-#include "server.h"
-#include "sim.h"
+#include "server.hpp"
+#include "sim.hpp"
 
 void server::on_receive(const char *buf) {
     keybd k=buf;
