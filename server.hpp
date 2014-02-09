@@ -21,8 +21,6 @@
  * 
  */
 
-#include <iostream>
-#include <cstring>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h> 

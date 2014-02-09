@@ -21,6 +21,8 @@
  * 
  */
 
+#include <iostream>
+#include <cstring>
 #include "server.hpp"
 #include "sim.hpp"
 

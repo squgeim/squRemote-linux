@@ -20,6 +20,7 @@
  * 
  * 
  */
+
 #include <cstdio>
 #include <fcntl.h>
 #include <errno.h>
@@ -55,7 +56,7 @@ uinput::uinput(int* keys, int llp) {
     if(ioctl(fd, UI_SET_EVBIT, EV_KEY) < 0)
         error("error: ioctl");
     for(int i=0; i<llp; i++) {
-	if(ioctl(fd, UI_SET_KEYBIT, keys[i]) < 0)
+        if(ioctl(fd, UI_SET_KEYBIT, keys[i]) < 0)
             error("error: ioctl");
     }
     if(ioctl(fd, UI_SET_EVBIT, EV_SYN) < 0)
