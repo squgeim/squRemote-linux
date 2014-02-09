@@ -45,7 +45,7 @@ class server {
 	public:
 		server(int);
 		~server();
-		void on_receive(const char*);
+		virtual void on_receive(const char*)=0;
 		void serve();
 };
 

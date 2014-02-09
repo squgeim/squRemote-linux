@@ -24,13 +24,18 @@
 #include "server.hpp"
 #include "sim.hpp"
 
-void server::on_receive(const char *buf) {
-    keybd k=buf;
-    k.exe();
-}
+class MyServer: public server {
+    public:
+    MyServer(int port):server(port){}
+
+    void on_receive(const char* buf) {
+        keybd k=buf;
+        k.exe();
+    }
+};
 
 int main(int argc, char **argv) {
-    server s(9999);
+    MyServer s(9999);
     s.serve();
     return 0;
 }
